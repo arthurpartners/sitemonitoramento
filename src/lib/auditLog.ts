@@ -84,7 +84,7 @@ export async function getAuditLogs(
     if (!rows?.length) return [];
 
     // Coleta IDs (UUIDs) que ainda estão como target para buscar o nome do cliente
-    const idsToResolve = [...new Set(rows.map((r: { target?: string }) => r.target).filter((t): t is string => typeof t === 'string' && UUID_REGEX.test(t)))];
+    const idsToResolve = Array.from(new Set(rows.map((r: { target?: string }) => r.target).filter((t): t is string => typeof t === 'string' && UUID_REGEX.test(t))));
 
     let nameById: Record<string, string> = {};
     if (idsToResolve.length > 0) {
