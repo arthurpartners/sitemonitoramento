@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
-import Image from 'next/image';
 import LoginForm from '@/components/LoginForm';
 import { isAuthenticated } from '@/lib/auth';
 
@@ -65,13 +64,13 @@ export default function LoginPage() {
           <div className="flex justify-center mb-8">
             <div className="relative">
               <div className="absolute -inset-4 bg-gradient-to-r from-purple-600 to-purple-800 rounded-2xl opacity-10 blur-lg" />
-              <Image
+              <img
                 src="https://partnerscom.com.br/wp-content/uploads/2022/12/logo.png"
                 alt="Partners Comunicação"
                 width={200}
                 height={60}
                 className="relative h-14 w-auto"
-                priority
+                loading="eager"
               />
             </div>
           </div>

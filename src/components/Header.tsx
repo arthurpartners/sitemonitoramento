@@ -2,7 +2,6 @@
 
 import { useRouter } from 'next/navigation';
 import { clearSession, getSession, logAccess } from '@/lib/auth';
-import Image from 'next/image';
 
 interface Session {
   username: string;
@@ -52,13 +51,13 @@ export default function Header({ session }: HeaderProps) {
         <div className="flex items-center justify-between h-16 sm:h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Image
+            <img
               src="https://partnerscom.com.br/wp-content/uploads/2022/12/logo.png"
               alt="Partners Comunicação"
               width={160}
               height={40}
               className="h-8 sm:h-10 w-auto brightness-0 invert"
-              priority
+              loading="eager"
             />
           </div>
 

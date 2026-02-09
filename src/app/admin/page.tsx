@@ -2,7 +2,6 @@
 
 import { useEffect, useState, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
-import Image from 'next/image';
 import { getSession, clearSession } from '@/lib/auth';
 
 interface AccessLog {
@@ -452,13 +451,13 @@ export default function AdminPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16 sm:h-20">
             <div className="flex items-center gap-4">
-              <Image
+              <img
                 src="https://partnerscom.com.br/wp-content/uploads/2022/12/logo.png"
                 alt="Partners Comunicação"
                 width={160}
                 height={40}
                 className="h-8 sm:h-10 w-auto brightness-0 invert"
-                priority
+                loading="eager"
               />
               <span className="hidden sm:inline-block px-3 py-1 bg-yellow-400 text-gray-900 text-xs font-bold rounded-full">
                 ADMIN
