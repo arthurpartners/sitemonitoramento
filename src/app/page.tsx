@@ -63,13 +63,13 @@ export default function LoginPage() {
           {/* Nome */}
           <div className="flex justify-center mb-8">
             <div className="text-center">
-              <p className="text-2xl font-bold text-gray-800">Partners Comunicação</p>
+              <p className="text-2xl sm:text-3xl font-bold text-gray-800">Partners Comunicação</p>
             </div>
           </div>
 
           {/* Título */}
           <div className="text-center mb-8">
-            <h1 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-2">
+            <h1 className="text-2xl font-bold text-gray-800 mb-2">
               Portal de Relatórios
             </h1>
             <p className="text-gray-500 text-sm">
