@@ -60,18 +60,10 @@ export default function LoginPage() {
       {/* Card de Login */}
       <div className="w-full max-w-md animate-fade-in relative z-10">
         <div className="bg-white rounded-3xl shadow-2xl p-8 sm:p-10 backdrop-blur-sm">
-          {/* Logo */}
+          {/* Nome */}
           <div className="flex justify-center mb-8">
-            <div className="relative">
-              <div className="absolute -inset-4 bg-gradient-to-r from-purple-600 to-purple-800 rounded-2xl opacity-10 blur-lg" />
-              <img
-                src="/logo.svg"
-                alt="Partners Comunicação"
-                width={200}
-                height={60}
-                className="relative h-14 w-auto"
-                loading="eager"
-              />
+            <div className="text-center">
+              <p className="text-2xl font-bold text-gray-800">Partners Comunicação</p>
             </div>
           </div>
 
