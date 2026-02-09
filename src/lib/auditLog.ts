@@ -97,17 +97,20 @@ export async function getAuditLogs(
       }
     }
 
-    const result: AuditLogEntry[] = rows.map((row: {
+    type Row = {
       id: string;
       admin_id: string;
       action: string;
       target?: string;
       details?: unknown;
       created_at: string;
-      clients?: { username: string; name: string } | null;
-    }) => {
+      clients?: { username: string; name: string } | { username: string; name: string }[] | null;
+    };
+
+    const result: AuditLogEntry[] = rows.map((row: Row) => {
       const target = row.target ?? '';
       const targetDisplay = typeof target === 'string' && UUID_REGEX.test(target) ? (nameById[target] ?? target) : target;
+      const clients = row.clients == null ? null : Array.isArray(row.clients) ? row.clients[0] ?? null : row.clients;
       return {
         id: row.id,
         admin_id: row.admin_id,
@@ -115,7 +118,7 @@ export async function getAuditLogs(
         target: targetDisplay,
         details: parseDetails(row.details),
         created_at: row.created_at,
-        clients: row.clients ?? null,
+        clients,
       };
     });
 
