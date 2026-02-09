@@ -65,7 +65,7 @@ export default function LoginPage() {
             <div className="relative">
               <div className="absolute -inset-4 bg-gradient-to-r from-purple-600 to-purple-800 rounded-2xl opacity-10 blur-lg" />
               <img
-                src="https://partnerscom.com.br/wp-content/uploads/2022/12/logo.png"
+                src="/logo.svg"
                 alt="Partners Comunicação"
                 width={200}
                 height={60}

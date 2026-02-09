@@ -52,7 +52,7 @@ export default function Header({ session }: HeaderProps) {
           {/* Logo */}
           <div className="flex-shrink-0">
             <img
-              src="https://partnerscom.com.br/wp-content/uploads/2022/12/logo.png"
+              src="/logo.svg"
               alt="Partners Comunicação"
               width={160}
               height={40}

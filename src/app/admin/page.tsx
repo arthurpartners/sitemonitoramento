@@ -452,7 +452,7 @@ export default function AdminPage() {
           <div className="flex items-center justify-between h-16 sm:h-20">
             <div className="flex items-center gap-4">
               <img
-                src="https://partnerscom.com.br/wp-content/uploads/2022/12/logo.png"
+                src="/logo.svg"
                 alt="Partners Comunicação"
                 width={160}
                 height={40}
